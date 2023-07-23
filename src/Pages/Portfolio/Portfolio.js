@@ -24,7 +24,7 @@ export function Portfolio(){
     }
     rando();
     return ()=>{}
-    },[contextData.currentUser]);
+    },[contextData.currentUser,update]);
     async function changeBio(e){
         await updateDoc(doc(ref,docID.current),{bio:e.currentTarget.value});
     }
@@ -40,6 +40,7 @@ export function Portfolio(){
         setUpdate(a=>a+1);
     }
     async function addContact(e){
+        e.preventDefault();
         let form= new FormData(e.currentTarget);
         let data=Object.fromEntries(form);
         let array=user.contacts;
@@ -61,10 +62,12 @@ export function Portfolio(){
         {Preferences.map(a=>{return (<button onClick={addSpecialty} id={a}>{a}</button>);})}
         </div>
         <form onSubmit={addContact}>
-            <label htmlFor="contact">Add Contact</label>
+            <label htmlFor="contact">New Contact</label>
             <input type="text" name="contact"/>
+            <label htmlFor="submit">Add Contact</label>
+            <input type="submit"name="submit"/>
         </form>
-        {user.contacts&&user.contacts.map(a=>{return <a href={a}>Link</a>;})}
+        {user.contacts&&user.contacts.map(a=>{return <a style={{display:"block"}}>{a}</a>;})}
         </>
     );
 }

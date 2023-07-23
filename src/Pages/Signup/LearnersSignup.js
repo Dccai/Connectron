@@ -8,7 +8,7 @@ import { createUserWithEmailAndPassword,signInWithEmailAndPassword,onAuthStateCh
 import {addDoc, collection} from '@firebase/firestore';
 export function LearnersSignup(){
     let contextData=useContext(Context);
-    useEffect(()=>{let authChange=onAuthStateChanged(auth,async(user)=>{contextData.userSetter(user.uid)}); return ()=>authChange;},[]);
+    useEffect(()=>{let authChange=onAuthStateChanged(auth,async(user)=>{(user&&contextData.userSetter(user.uid))}); return ()=>authChange;},[]);
     let [page,newPage]=useState(false);
     if(page){
         return <Navigate to="/Portfolio" replace={true}/>

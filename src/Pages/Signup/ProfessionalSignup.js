@@ -10,7 +10,7 @@ export function ProfessionalSignup(){
     let ref=collection(fireStore,'userData');
     let contextData=useContext(Context);
     let [page,newPage]=useState(false);
-    useEffect(()=>{let authChange=onAuthStateChanged(auth,async(user)=>{contextData.userSetter(user.uid)}); return ()=>authChange;},[]);
+    useEffect(()=>{let authChange=onAuthStateChanged(auth,async(user)=>{user&&contextData.userSetter(user.uid)}); return ()=>authChange;},[]);
     if(page){
         return <Navigate to="/Portfolio" replace={true}/>
     }

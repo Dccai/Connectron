@@ -4,9 +4,13 @@ import { signInWithEmailAndPassword ,onAuthStateChanged} from "firebase/auth";
 import { Navigate } from "react-router-dom";
 import { Context} from "../../App";
 export function Signin(){
-    useEffect(()=>{let authChange=onAuthStateChanged(auth,async(user)=>{contextData.userSetter(user.uid)}); return ()=>authChange;},[]);
     let contextData=useContext(Context);
     let [page,newPage]=useState(false);
+    let [back,setBack]=useState(false);
+    useEffect(()=>{
+        let authChange=onAuthStateChanged(auth,async(user)=>{
+            user&&contextData.userSetter(user.uid)}); return ()=>authChange;
+    },[]);
     if(page){
         return <Navigate to="/Portfolio" replace={true}/>
     }
