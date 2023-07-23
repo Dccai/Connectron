@@ -3,6 +3,7 @@ import { Context } from "../../App";
 import { fireStore } from "../../Firebase";
 import { Navigate } from "react-router-dom";
 import {collection,getDocs,where,query,data} from "firebase/firestore"
+import './Search.css';
 export function Search(){
     let ref=collection(fireStore,'userData');
     let contextData=useContext(Context);
@@ -40,8 +41,7 @@ function goToPortfolio(data){
     
 }
     return(<div>
-        Search Bar
-        <button onClick={getSearchResults}>Search Based On Your Preferences</button>
+        <button id="search"onClick={getSearchResults}>Search Based On Your Preferences</button>
         {search&&search.map((a)=>{return (<div id={a[0].id}><button onClick={()=>{goToPortfolio(a[0])}}>{a[0].userName}</button></div>);})}
     </div>);
 }
