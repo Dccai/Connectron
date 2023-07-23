@@ -1,0 +1,1 @@
+export const Preferences=['Computer Scientist','Physicst','Speller'];

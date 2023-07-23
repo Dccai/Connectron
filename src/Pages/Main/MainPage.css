@@ -1,0 +1,54 @@
+#head{
+    padding:0px 0px 100px 0px;
+    margin-left: auto;
+    margin-right: auto;
+    color:white;
+    margin-top: -60px;
+    background-color: darkgray;
+    min-height: 200px;
+    text-align: center;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url('https://www.imf.org/-/media/Images/IMF/Blog/Articles/Hero/2023/January/BLOG-2099x600-Corporate-Distress-CHUNYIP-WONG-iStock-by-Getty-Images-iStock-1295808919.ashx');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+
+}
+#title{
+   padding:70px 10px 10px 10px;
+   color:white;
+   font-size:70px;
+}
+#body{
+        min-height:600px;
+    width: 100%;
+}
+#ProfSignup{
+    padding: 40px 40px;
+    margin-top: -23px;
+    background-color: burlywood;
+    text-align: center;
+    height: 200px; 
+}
+#LearnersSignup{
+    padding: 40px 40px;
+    margin-top: -23px;
+    background-color:deeppink;
+    text-align: center;
+    height: 200px; 
+}
+#Signin{
+    padding: 40px 40px;
+    margin-top: -23px;
+    background-color:blue;
+    text-align: center;
+    height: 200px; 
+}
+#Portfolio{
+    padding: 40px 40px;
+    margin-top: -23px;
+    background-color:green;
+    text-align: center;
+    height: 200px; 
+}

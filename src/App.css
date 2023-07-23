@@ -6,13 +6,23 @@
   height: 40vmin;
   pointer-events: none;
 }
-
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+#websiteHead{
+background-color: beige;
+width: 100%;
+height: 100px;
+text-align: center;
+font-family: 'Courier New', Courier, monospace;
+font-weight: 600;
+font-size: 30px;
+}
+.Link{
+  display: block;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

@@ -1,0 +1,17 @@
+#signUp{
+    color:azure;
+    background-color: brown;
+}
+#head{
+    color:blueviolet;
+    background-color: brown;
+}
+#headImage{
+    width:60%;
+    margin-left: auto;
+    margin-right: auto;
+}
+#headh1{
+    text-align: center;
+    color:black;
+}
