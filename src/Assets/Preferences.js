@@ -1,1 +1,1 @@
-export const Preferences=['Computer Scientist','Physicst','Speller'];
+export const Preferences=['Computer Scientist','Physicist','Accountant','Mathematician','Machine Learning Expert','Physician','Architect','Dentist','Graphic Designer','Policeman'];

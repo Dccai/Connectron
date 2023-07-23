@@ -19,10 +19,11 @@ export function Search(){
         let searchResult=[];
         let qUser= query(ref,where("id","==",contextData.currentUser));
         let data=await getDocs(qUser);
-        let userData=data.docs[0].data();
+        let userData=data.docs[0]&&data.docs[0].data();
         docs.forEach(doc=>{
+            if(docs!==undefined){
             let data=doc.data();
-            if(data.preferences.length!==0&&userData.preferences.length!==0){
+            if(data.id!==contextData.currentUser&&data.preferences.length!==0&&userData.preferences.length!==0){
                 let score=0;
                 for (let x in data.preferences){
                     if(userData.preferences.includes(data.preferences[x])){
@@ -31,6 +32,7 @@ export function Search(){
                 }
                 searchResult.push([data,score]);
             }
+        }
         });
         searchResult.sort((a,b)=>{return b[1]-a[1];});
         setSearch(searchResult.slice(0,n));
