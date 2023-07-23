@@ -13,6 +13,8 @@ export function ShowPortfolio(){
         {data.current.preferences&&data.current.preferences.map((a)=>{
             return(<div className="specialtyBar"><h5>{a}</h5></div>);}
         )}
+         {<a style={{display:"block"}}>{data.current.email}</a>}
+        {data.current.contacts&&data.current.contacts.map(a=>{return <a style={{display:"block"}}>{a}</a>;})}
         </>
     );
 }

@@ -67,6 +67,7 @@ export function Portfolio(){
             <label htmlFor="submit">Add Contact</label>
             <input type="submit"name="submit"/>
         </form>
+        {<a style={{display:"block"}}>{user.email}</a>}
         {user.contacts&&user.contacts.map(a=>{return <a style={{display:"block"}}>{a}</a>;})}
         </>
     );
